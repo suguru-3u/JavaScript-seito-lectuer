@@ -29,19 +29,20 @@ const quiz = [
     }
 ];
 
+
 const quzLength = quiz.length;
 let quizIndex = 0;
 let score = 0;
+let answesCount = `正解数は：${score}`;
 
 const $button = document.getElementsByTagName('button');
 const buttonLength = $button.length;
-
+const $answersCount = document.getElementById('ansersCount');
+$answersCount.textContent = answesCount;
 
 // クイズの問題文の準備
 const setUpQuiz = () => {
     document.getElementById('js-question').textContent = quiz[quizIndex].question;
-    
-    
     let buttonIndex = 0;
     let buttonLength = $button.length;
     while(buttonIndex < buttonLength){
@@ -56,6 +57,7 @@ const clickHandler = (e) => {
     if(quiz[quizIndex].corecct === e.target.textContent){
         window.alert('正解！');
         score++;
+        $answersCount.textContent = `正解数は：${score}`;
     } else{
         window.alert('不正解！');
     }
