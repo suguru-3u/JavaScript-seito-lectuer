@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <p>{{ message }}</p> -->
+        <!-- <p>
+            <input type="text" v-model="km">
+        </p>
+        <p>
+            <input type="text" v-model="m">
+        </p> -->
+        <!-- <p><input type="text" v-model="firstName"></p>
+        <p><input type="text" v-model="lasttName"></p>
+        <p>fullName: {{ fullName }}</p> -->
+        <ul>
+            <li v-for="color in colors">
+                {{ color.name }}
+            </li>
+            <button v-on:click="onClick">Click</button>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 初回だけ動く v-once -->
+        <!-- <p v-once>{{ message }}</p>
+        <button v-on:click="clickHandler">Click</button> -->
+
+        <!-- すのましゅタックタグが表示される -->
+        <!-- <p v-pre>{{ message }}</p> -->
+
+        <!-- プレーンなHTMLを挿入したい -->
+        <!-- 使用するときはXSSに気をつけなければいけない..あまり使わない？ -->
+        <!-- <p>{{ message }}</p>
+        <p v-html="message"></p> -->
+
+        <!-- <p c-cloak>{{ message2 }}</p> -->
+        
+        <!-- v-text -->
+        <!-- 第一選択肢としてMustache構文を利用したほうがいいかも -->
+        <!-- <h2>Mustache</h2>
+        <p>{{ message2 }}</p>
+
+        <h2>v-text</h2>
+        <p v-text="message2"></p> -->
+
+        <!-- JavaScript式 -->
+        <!-- 単一コードしか動かすことができない -->
+        <!-- let x = 1 ⇦ だめ -->
+        <!-- <p>{{ message2 }}</p>
+        <p>{{ number + 1 }}</p>
+        <p>{{ message2.split('').reverse().join('') }}</p>
+        <p>{{ ok ? 'YES' : 'NO' }}</p> -->
+
+        <!-- v-bindの省略記法 -->
+        <a v-bind:href="url">link1</a><br>
+        <a :href="url">link2</a>
+
+    </div>
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <title>Document</title>
+</head>
+    <body>
+        <div id="app">
+            <!-- <p>{{ message }}</p>
+            <p>{{ count }}</p>
+            <p>{{ user.perfecture }}</p>
+            <p>{{ colors[1] }}</p> -->
+            <input type="text" v-bind:value="message">
+            <p v-if="toggle">{{ message }}</p>
+            <ol>
+                <li v-for="color in colors">
+                    {{ color }}
+                </li>
+            </ol>
+            <ul>
+                <li v-for="(value, key) in users">
+                    {{ key }}:{{ value }}
+                </li>
+            </ul>
+            <button v-on:click="onClick">Click</button>
+            <p>{{ now }}</p>
+            <input type="text" v-model="message">
+            <!-- <pre>{{ $data }}</pre> -->
+            <hello-component></hello-component>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+</html>
+
+<!-- 単一ディレクティブ -->
+<!-- 属性へのデーターバインニングはvbind: -->
+<!-- 条件分岐はv-if -->
+<!-- 繰り返しいはv-for -->
+<!-- イベント処理を理解する v-on -->
+<!-- 双方向データビンディいんぐ v-model -->
